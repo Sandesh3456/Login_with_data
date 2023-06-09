@@ -1,0 +1,29 @@
+{
+    "user_records": [
+        {
+            "name": "abcdefghi",
+            "email_sign": "abcdef@gmail.com",
+            "password": "111222333"
+        },
+        {
+            "name": "abcdefghijkl",
+            "email_sign": "abc@gmail.com",
+            "password": "123456789"
+        },
+        {
+            "name": "abcdefghijkl",
+            "email_sign": "abcdef@gmail.com",
+            "password": "11111111111"
+        },
+        {
+            "name": "abcdefghijkl",
+            "email_sign": "abcdef@gmail.com",
+            "password": "111222333"
+        },
+        {
+            "name": "11",
+            "email_sign": "11",
+            "password": "11"
+        }
+    ]
+}

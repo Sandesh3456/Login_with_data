@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(22, 89%, 45%);
+}
+.container {
+    margin: 100px;
+    padding: 40px 40px 40px 40px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: hsl(0, 0%, 100%);
+}

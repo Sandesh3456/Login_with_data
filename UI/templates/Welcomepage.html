@@ -4,11 +4,16 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <div class="back"> 
-        <div class="container">
-        <p>
-            Login Successful
-        </p>
+        <div class="back1"> 
+        <div class="container1">
+                <form method="POST" action={{action}}>
+                <label>Title &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="title" id="title" class="title" value="" required><br><br>
+                <label>Content</label>
+                <textarea name="content" id="content" ></textarea><br><br>
+                <label>Author &nbsp;</label>
+                <input type="text" name="author" id="author" class="author" required>
+                <button type="submit">Submit the content</button>
         </div>
         </div>
     </body>

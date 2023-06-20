@@ -54,13 +54,9 @@ def post_signup():
 
     def write_json(new_data, filename='data.json'):
         with open(filename,'r+') as file:
-            # First we load existing data into a dict.
             file_data = json.load(file)
-             # Join new_data with file_data inside emp_details
             file_data["user_records"].append(new_data)
-            # Sets file's current position at offset.
             file.seek(0)
-            # convert back to json.
             json.dump(file_data, file, indent = 4)
     
 
@@ -86,14 +82,14 @@ def post_login():
     print('post----')
     email_sign= flask.request.form["email_signup"]
     password = flask.request.form["password"]
-    print("name is =",email_sign)
-    print("password is =",password)
+    # print("name is =",email_sign)
+    # print("password is =",password)
 
     with open('data.json') as user_file:
         file_contents = user_file.read()
 
     parsed_json = json.loads(file_contents)
-    print(parsed_json)
+    # print(parsed_json)
     
     for i in parsed_json['user_records']:
 
@@ -103,14 +99,20 @@ def post_login():
 
             print("signed_email is",i['email_sign'])
             print("signed_password is",i['password'])
-            login_status = "True"
+            return flask.render_template("Welcomepage.html",action="/welcome_post") 
         else:
             print("error signed_email is",i['email_sign'])
             print("eeror signed_password is",i['password'])
             login_status = "False"
-    if login_status =="True":  
-        return flask.render_template("Welcomepage.html") 
-    else:
-        return flask.render_template("errorpage.html")  
 
 
+    if login_status =="False":  
+            return flask.render_template("errorpage.html") 
+    
+
+@app.route("/welcome_post", methods = ["POST"])
+def post_welcome():
+    title= flask.request.form["title"]
+    content=flask.request.form["content"]
+    author=flask.request.form["author"]
+    return flask.render_template("Blogpage.html",title=title,blog_portion=content,author=author)

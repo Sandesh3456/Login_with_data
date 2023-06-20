@@ -64,6 +64,11 @@
             "name": "sandesh123",
             "email_sign": "sandesh123@gmail.com",
             "password": "123456789"
+        },
+        {
+            "name": "abcdefghi",
+            "email_sign": "pathak2057@gmail.com",
+            "password": "111111222"
         }
     ]
 }
